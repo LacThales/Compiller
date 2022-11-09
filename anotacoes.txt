@@ -1,0 +1,2 @@
+grun atribuicao comece -tree < entrada.txt        => árvore de tokens no terminal
+grun atribuicao comece -ps file.ps < entrada.txt  => arquivo do gráfico gerado
