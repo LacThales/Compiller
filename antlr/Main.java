@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -33,16 +34,27 @@ public class Main {
 			// Map<String,String> Tokens = new HashMap<String,String>();
 
 			// Instanciar analisador semântico
-			tokens.fill();
-			for (Object token : tokens.getTokens()) {
-				System.out.println(token);
-			}
+			//tokens.fill();
+			//for (Object token : tokens.getTokens()) {
+			//	System.out.println(token);
+			//}
 
 			// andar sobre a arvore de derivacao
 			ParseTreeWalker walker = new ParseTreeWalker();
 
 			tradutor tr = new tradutor();
 			walker.walk(tr, tree);
+
+			try {
+				FileWriter writer = new FileWriter("Out.java");
+				writer.write("public class Out {\n    public static void main(String[] args) {\n        " + tr.codigo + "\n    }\n}\n");
+				writer.close();
+			} catch (IOException e) {
+				System.out.println("[+] Ocorreu um erro ao criar o arquivo Out.java [+]");
+				e.printStackTrace();
+			}
+
+			System.out.println("\u001B[32m" + "[!] COMPILADO COM SUCESSO [!] -> Msg: Não houveram erros durante a Compilação." + "\u001B[0m");
 		} catch (Exception e) {
 		}
 	}

@@ -1,1 +1,2 @@
-joga_na_telaa("OI");
+joga_na_tela("OI");
+joga_na_tela("TESTE");
