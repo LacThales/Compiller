@@ -1,0 +1,20 @@
+ public class Out {
+    public static void main(String[] args) {
+        System.out.println("OI");
+System.out.println("TESTE");
+if(5<5){
+int real=10;
+}
+else{
+int realx=7;
+}
+while (5!=6){
+int x=1;
+}
+do {
+real=real+1;
+real+1;}
+while (real<10);
+
+    }
+}

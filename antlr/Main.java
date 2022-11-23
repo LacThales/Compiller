@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		// ler codigo -> passar para o lexico -> passar para o sintatico -> fazer a
 		// traducao
-		System.out.println("Digite o seu codigo:");
+		System.out.println("[+] Entre com  seu codigo:");
 
 		// fazer leitura do codigo do usuario
 		CharStream input = CharStreams.fromStream(System.in);
@@ -51,12 +51,13 @@ public class Main {
 				writer.write("public class Out {\n    public static void main(String[] args) {\n        " + tr.codigo + "\n    }\n}\n");
 				writer.close();
 			} catch (IOException e) {
-				System.out.println("[+] Ocorreu um erro ao criar o arquivo Out.java [+]");
+				System.out.println("\u001B[31m" + "[+] Ocorreu um erro ao criar o arquivo Out.java [+]" + "\u001B[0m");
 				e.printStackTrace();
 			}
 
 			System.out.println("\u001B[32m" + "[!] COMPILADO COM SUCESSO [!] -> Msg: Não houveram erros durante a Compilação." + "\u001B[0m");
 		} catch (Exception e) {
+			
 		}
 	}
 }

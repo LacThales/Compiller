@@ -18,12 +18,12 @@ r_keys: '}';
 texto: '"' id+ '"';
 
 //===================== OP MATEMATICA =======================//
-comando_matematico: (num | num_decimal) operador_matematico (num | num_decimal) termine comando*;
+comando_matematico:(num|num_decimal|id) operador_matematico (num|num_decimal|id) operador_matematico* (num|num_decimal|id)* termine comando*;
 operador_matematico: '+' | '*' | '/' | '-';
 
 //===================== ATRIBUICAO =======================//
 comando_declaracao: tipo comando_atribuicao;
-comando_atribuicao: id operador (id|num|num_decimal) termine;
+comando_atribuicao: id operador (id|num|num_decimal|comando_matematico) termine;
 
 //===================== INPUT =======================//
 comando_input: input l_par (id | texto) r_par termine comando*;

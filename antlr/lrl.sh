@@ -7,7 +7,7 @@
 # Data     : Thu 22 Sep 2022
 # Licença  : GNU/GPL v3.0
 # -----------------------------------------------------------------
-# Uso: lrl.sh arquivo_de_entrada.txt
+# Uso: ./lrl.sh 
 # -----------------------------------------------------------------
 
 #---------------------------- BANNER --------------------------------
@@ -52,6 +52,7 @@ Extra()
 	java Out
 	echo "***************"
 	echo " "
+	rm -f Out.java.orig
 	java org.antlr.v4.gui.TestRig atribuicao comece -ps output_img.ps < entrada.txt
 	xdg-open output_img.ps
 	echo -e "\033[01;31m[!] End of Compiling [!]\033[0m"
@@ -68,8 +69,6 @@ then
 	Extra
 	exit 0
 else
-	echo -e "\033[01;31m[!] O pacote astyle já está instalado [!]\033[0m"
-	echo " "
 	Banner
 	Main
 	Extra

@@ -75,7 +75,7 @@ public class tradutor extends atribuicaoBaseListener {
             String pega_variavel[] = ctx.getText().split("=");
             String nome_Variavel = pega_variavel[0].substring(14 , pega_variavel[0].length());
             if (example.containsKey(nome_Variavel) && example.containsValue(0)){
-                System.out.println("já existe a variável! " + tipo_variavel + " " + nome_Variavel);
+                System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " do tipo " + tipo_variavel + " já foi definida neste escopo [!]" + "\u001B[0m");
                 System.exit(0);
             }else{
                 example.put(nome_Variavel, 0);
@@ -85,7 +85,7 @@ public class tradutor extends atribuicaoBaseListener {
             String pega_variavel[] = ctx.getText().split("=");
             String nome_Variavel = pega_variavel[0].substring(15 , pega_variavel[0].length());
             if (example.containsKey(nome_Variavel) && example.containsValue(0)){
-                System.out.println("já existe a variável! " + tipo_variavel + " " + nome_Variavel);
+                System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " do tipo " + tipo_variavel + " já foi definida neste escopo [!]" + "\u001B[0m");
                 System.exit(0);
             }else{
                 example.put(nome_Variavel, 0);
@@ -95,7 +95,7 @@ public class tradutor extends atribuicaoBaseListener {
             String pega_variavel[] = ctx.getText().split("=");
             String nome_Variavel = pega_variavel[0].substring(5 , pega_variavel[0].length());
             if (example.containsKey(nome_Variavel) && example.containsValue(0)){
-                System.out.println("já existe a variável! " + tipo_variavel + " " + nome_Variavel);
+                System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " do tipo " + tipo_variavel + " já foi definida neste escopo [!]" + "\u001B[0m");
                 System.exit(0);
             }else{
                 example.put(nome_Variavel, 0);
@@ -105,7 +105,7 @@ public class tradutor extends atribuicaoBaseListener {
             String pega_variavel[] = ctx.getText().split("=");
             String nome_Variavel = pega_variavel[0].substring(8 , pega_variavel[0].length());
             if (example.containsKey(nome_Variavel) && example.containsValue(0)){
-                System.out.println("já existe a variável! " + tipo_variavel + " " + nome_Variavel);
+                System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " do tipo " + tipo_variavel + " já foi definida neste escopo [!]" + "\u001B[0m");
                 System.exit(0);
             }else{
                 example.put(nome_Variavel, 0);
@@ -115,7 +115,7 @@ public class tradutor extends atribuicaoBaseListener {
             String pega_variavel[] = ctx.getText().split("=");
             String nome_Variavel = pega_variavel[0].substring(8 , pega_variavel[0].length());
             if (example.containsKey(nome_Variavel) && example.containsValue(0)){
-                System.out.println("já existe a variável! " + tipo_variavel + " " + nome_Variavel);
+                System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " do tipo " + tipo_variavel + " já foi definida neste escopo [!]" + "\u001B[0m");
                 System.exit(0);
             }else{
                 example.put(nome_Variavel, 0);
@@ -128,7 +128,7 @@ public class tradutor extends atribuicaoBaseListener {
         String pega_variavel[] = ctx.getText().split("=");
         String nome_Variavel = pega_variavel[0].substring(0 , pega_variavel[0].length());
         if (!example.containsKey(nome_Variavel)){
-            System.out.println("Variável " + nome_Variavel + " não declarada! ");
+            System.out.println("\u001B[31m" + "[!] A variavel " + nome_Variavel + " não foi declarada [!]" + "\u001B[0m");
             System.exit(0);
         }
     }

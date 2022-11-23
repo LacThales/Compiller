@@ -1,4 +1,6 @@
-numero_inteiro real = 6;
+joga_na_tela("OI");
+joga_na_tela("TESTE");
 caso_sim ( 5 < 5 ) { numero_inteiro real = 10; }
-caso_nao {numero_inteiro real = 7; }
-numero_inteiro real = 11;
+caso_nao {numero_inteiro realx = 7; }
+enquanto ( real != 6 ) { real = real + 1; }
+faça { real = real + 1; } enquanto( real < 10 );
