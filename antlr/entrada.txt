@@ -1,2 +1,4 @@
-joga_na_tela("OI");
-joga_na_tela("TESTE");
+numero_inteiro real = 6;
+caso_sim ( 5 < 5 ) { numero_inteiro real = 10; }
+caso_nao {numero_inteiro real = 7; }
+numero_inteiro real = 11;

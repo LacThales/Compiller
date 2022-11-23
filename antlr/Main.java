@@ -47,6 +47,7 @@ public class Main {
 
 			try {
 				FileWriter writer = new FileWriter("Out.java");
+				writer.write(" ");
 				writer.write("public class Out {\n    public static void main(String[] args) {\n        " + tr.codigo + "\n    }\n}\n");
 				writer.close();
 			} catch (IOException e) {

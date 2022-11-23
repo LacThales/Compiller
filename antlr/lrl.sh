@@ -52,7 +52,6 @@ Extra()
 {	
 	astyle --quiet Out.java
 	javac Out.java
-	rm -f Out.java.orig
 	echo -e "\033[01;31m[!] Saída do arquivo .java gerado: [!]\033[0m"
 	echo " "
 	echo "***************"
@@ -79,6 +78,8 @@ then
 	Main
 	Extra
 	echo -e "\033[01;31m[!] End of Compiling [!]\033[0m"
+	#rm -f Out.class
+	#rm -f output_img.ps
 	exit 0
 else
 	echo -e "\033[01;31m[!] Parâmetro Desconhecido [!]\033[0m"
