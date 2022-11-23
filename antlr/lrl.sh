@@ -3,12 +3,11 @@
 # -----------------------------------------------------------------
 # Script   : lrl.sh
 # Descrição: Atalho para compilação da Lazy Recursive Language
-# Versão   : 1.5
+# Versão   : 2.0
 # Data     : Thu 22 Sep 2022
 # Licença  : GNU/GPL v3.0
 # -----------------------------------------------------------------
 # Uso: lrl.sh arquivo_de_entrada.txt
-# IMPORTANTE: Instalar o pacote astyle -> sudo apt-get install -y astyle
 # -----------------------------------------------------------------
 
 #---------------------------- BANNER --------------------------------
@@ -29,13 +28,9 @@ echo "
                                                         
     	[!] A simple language.... for the lazy ones [!]
 "
-}
-
-#---------------------------- DEPENDENCIES --------------------------------
-Dependencies()
-{
-	echo -e "\033[01;31m[!] Instalando dependencias... [!]\033[0m"
-	sudo apt-get install -y astyle
+echo " "
+echo -e "\033[01;31m[!] Starting the Compiling process... [!]\033[0m"
+sleep 1
 }
 
 #---------------------------- MAIN --------------------------------
@@ -43,7 +38,6 @@ Main()
 {	
 	java -jar /usr/local/lib/antlr-4.10.1-complete.jar atribuicao.g4
 	javac *.java
-	#java Main < $1
 	java Main < entrada.txt
 }
 
@@ -59,29 +53,25 @@ Extra()
 	echo "***************"
 	echo " "
 	java org.antlr.v4.gui.TestRig atribuicao comece -ps output_img.ps < entrada.txt
-	#java org.antlr.v4.gui.TestRig atribuicao comece -ps output_img.ps < $1
 	xdg-open output_img.ps
+	echo -e "\033[01;31m[!] End of Compiling [!]\033[0m"
 }
 
 #---------------------------- EXECUÇÃO --------------------------------
-if [[ $1 == "-d" ]] 
+if [[  ! $(dpkg -l astyle) ]]
 then
-	Dependencies
-	exit 0
-elif [[ $# -eq 0  ]]
-then
+	echo -e "\033[01;31m[!] Instalando dependencias... [!]\033[0m"
+	sudo apt install -y astyle;
+	echo " ********************** "
 	Banner
-	#echo -e "\033[01;31m[!] Arquivo de entrada: $1 [!]\033[0m"
-	echo " "
-	echo -e "\033[01;31m[!] Starting the Compiling process... [!]\033[0m"
-	sleep 1
 	Main
 	Extra
-	echo -e "\033[01;31m[!] End of Compiling [!]\033[0m"
-	#rm -f Out.class
-	#rm -f output_img.ps
 	exit 0
 else
-	echo -e "\033[01;31m[!] Parâmetro Desconhecido [!]\033[0m"
+	echo -e "\033[01;31m[!] O pacote astyle já está instalado [!]\033[0m"
+	echo " "
+	Banner
+	Main
+	Extra
 	exit 0
 fi
