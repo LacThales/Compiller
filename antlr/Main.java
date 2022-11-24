@@ -31,13 +31,6 @@ public class Main {
 			parser.removeErrorListeners();
 			parser.addErrorListener(errorListener);
 			ParseTree tree = parser.comece();
-			// Map<String,String> Tokens = new HashMap<String,String>();
-
-			// Instanciar analisador semântico
-			//tokens.fill();
-			//for (Object token : tokens.getTokens()) {
-			//	System.out.println(token);
-			//}
 
 			// andar sobre a arvore de derivacao
 			ParseTreeWalker walker = new ParseTreeWalker();
@@ -48,7 +41,7 @@ public class Main {
 			try {
 				FileWriter writer = new FileWriter("Out.java");
 				writer.write(" ");
-				writer.write("public class Out {\n    public static void main(String[] args) {\n        " + tr.codigo + "\n    }\n}\n");
+				writer.write("import java.util.Scanner;  \n\n public class Out {\n   public static void main(String[] args) {\n   Scanner entrada = new Scanner(System.in);    \n " + tr.codigo + "\n    }\n}\n");
 				writer.close();
 			} catch (IOException e) {
 				System.out.println("\u001B[31m" + "[+] Ocorreu um erro ao criar o arquivo Out.java [+]" + "\u001B[0m");

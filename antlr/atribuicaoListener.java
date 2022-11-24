@@ -137,6 +137,16 @@ public interface atribuicaoListener extends ParseTreeListener {
 	 */
 	void exitOperador_matematico(atribuicaoParser.Operador_matematicoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link atribuicaoParser#comando_matematico_atribuicao}.
+	 * @param ctx the parse tree
+	 */
+	void enterComando_matematico_atribuicao(atribuicaoParser.Comando_matematico_atribuicaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link atribuicaoParser#comando_matematico_atribuicao}.
+	 * @param ctx the parse tree
+	 */
+	void exitComando_matematico_atribuicao(atribuicaoParser.Comando_matematico_atribuicaoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link atribuicaoParser#comando_declaracao}.
 	 * @param ctx the parse tree
 	 */
@@ -166,6 +176,16 @@ public interface atribuicaoListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitComando_input(atribuicaoParser.Comando_inputContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link atribuicaoParser#comando_input_atribuicao}.
+	 * @param ctx the parse tree
+	 */
+	void enterComando_input_atribuicao(atribuicaoParser.Comando_input_atribuicaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link atribuicaoParser#comando_input_atribuicao}.
+	 * @param ctx the parse tree
+	 */
+	void exitComando_input_atribuicao(atribuicaoParser.Comando_input_atribuicaoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link atribuicaoParser#input}.
 	 * @param ctx the parse tree

@@ -171,6 +171,18 @@ public class atribuicaoBaseListener implements atribuicaoListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterComando_matematico_atribuicao(atribuicaoParser.Comando_matematico_atribuicaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitComando_matematico_atribuicao(atribuicaoParser.Comando_matematico_atribuicaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterComando_declaracao(atribuicaoParser.Comando_declaracaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -202,6 +214,18 @@ public class atribuicaoBaseListener implements atribuicaoListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitComando_input(atribuicaoParser.Comando_inputContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterComando_input_atribuicao(atribuicaoParser.Comando_input_atribuicaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitComando_input_atribuicao(atribuicaoParser.Comando_input_atribuicaoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

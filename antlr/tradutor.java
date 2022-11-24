@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +61,7 @@ public class tradutor extends atribuicaoBaseListener {
     public void exitComando_matematico(atribuicaoParser.Comando_matematicoContext ctx) {
         codigo += ctx.getText();
     }
+
 
     @Override
     public void exitOperador_matematico(atribuicaoParser.Operador_matematicoContext ctx) {
@@ -134,8 +134,13 @@ public class tradutor extends atribuicaoBaseListener {
     }
 
     @Override
-    public void exitComando_input(atribuicaoParser.Comando_inputContext ctx) {
-        codigo += ctx.getText();
+    public void enterComando_input(atribuicaoParser.Comando_inputContext ctx) {
+        codigo += "entrada.nextLine()";
+    }
+
+    @Override
+    public void enterComando_input_atribuicao(atribuicaoParser.Comando_input_atribuicaoContext ctx) {
+        codigo += "entrada.nextInt()";
     }
 
     @Override

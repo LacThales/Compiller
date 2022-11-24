@@ -1,6 +1,5 @@
-joga_na_tela("OI");
-joga_na_tela("TESTE");
-caso_sim ( 5 < 5 ) { numero_inteiro real = 10; }
-caso_nao {numero_inteiro realx = 7; }
-enquanto ( real != 6 ) { real = real + 1; }
-faça { real = real + 1; } enquanto( real < 10 );
+numero_inteiro b = 5;
+numero_inteiro b = 4;
+numero_inteiro media = a + b + c;
+numero_inteiro resposta = media / 3;
+joga_na_tela(resposta);

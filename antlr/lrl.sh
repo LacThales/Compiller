@@ -30,7 +30,6 @@ echo "
 "
 echo " "
 echo -e "\033[01;31m[!] Starting the Compiling process... [!]\033[0m"
-sleep 1
 }
 
 #---------------------------- MAIN --------------------------------
@@ -52,7 +51,7 @@ Extra()
 	java Out
 	echo "***************"
 	echo " "
-	rm -f Out.java.orig
+	rm -rf Out.java.orig
 	java org.antlr.v4.gui.TestRig atribuicao comece -ps output_img.ps < entrada.txt
 	xdg-open output_img.ps
 	echo -e "\033[01;31m[!] End of Compiling [!]\033[0m"
